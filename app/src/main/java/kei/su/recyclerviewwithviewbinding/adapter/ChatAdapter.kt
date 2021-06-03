@@ -1,7 +1,6 @@
 package kei.su.recyclerviewwithviewbinding. adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -10,6 +9,16 @@ import kei.su.recyclerviewwithviewbinding.databinding.ChatHeaderViewBinding
 import kei.su.recyclerviewwithviewbinding.databinding.ChatRowViewBinding
 import java.text.SimpleDateFormat
 import java.util.*
+
+/*
+    References:
+    https://androidwave.com/android-recyclerview-example-best-practices/
+    https://stackoverflow.com/questions/60423596/how-to-use-viewbinding-in-a-recyclerview-adapter
+    https://gist.github.com/fangbrian/8a79b7ee64ad3bd15c48509adcf25cef
+    https://developer.android.com/topic/libraries/view-binding
+    https://developer.android.com/topic/libraries/data-binding/expressions
+
+ */
 
 class ChatAdapter(ids: MutableList<String>, db: DatabaseManager, cb: Callback): RecyclerView.Adapter<BaseViewHolder>() {
     private val CONNECTION_ROW = 0
